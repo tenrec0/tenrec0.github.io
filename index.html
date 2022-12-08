@@ -16,7 +16,7 @@ r<!DOCTYPE html>
     <meta property="og:site_name" content="Tenrec" />
     <meta property="og:type" content="article" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="https://msnews.github.io/assets/img/icons/M.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tenrec0.github.io/assets/img/icons/M.png">
     <meta name="apple-mobile-web-app-title" content="Tenrec">
     <meta name="application-name" content="Tenrec">
     <meta name="theme-color" content="#ffffff">
@@ -537,9 +537,9 @@ r<!DOCTYPE html>
             }
         }
     </style>
-    <link rel="preload" href="https://msnews.github.io/assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://tenrec0.github.io/assets/css/main.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://msnews.github.io/assets/css/main.css"></noscript>
+        <link rel="stylesheet" href="https://tenrec0.github.io/assets/css/main.css"></noscript>
     <script
         type="text/javascript"> (function (w) { "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } } var rp = loadCSS.relpreload = {}; rp.support = (function () { var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 } return function () { return ret } })(); rp.bindMediaToggle = function (link) { var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia } if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) } setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000) }; rp.poly = function () { if (rp.support()) { return } var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } } }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } } if (typeof exports !== "undefined") { exports.loadCSS = loadCSS } else { w.loadCSS = loadCSS } }(typeof global !== "undefined" ? global : this)) </script>
     <script
@@ -586,8 +586,8 @@ r<!DOCTYPE html>
                         <!-- <svg width="60px" height="153px" viewBox="10 0 277 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="logocon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="LucidaGrande, Lucida Grande" font-size="100" font-weight="normal">
                                 <g id="logo" transform="translate(-14.000000, -69.000000)" fill="#515556">
-                                    <text id="MIND">
-                                        <tspan x="18" y="179">MIND</tspan>
+                                    <text id="Tenrec">
+                                        <tspan x="18" y="179">Tenrec</tspan>
                                     </text>
                                 </g>
                             </g>
@@ -600,7 +600,7 @@ r<!DOCTYPE html>
                     <div class="container header__links-wrapper">
                         
                         <a class="header__link" href="#about-mind" itemprop="url"> <span itemprop="name">About
-                                MIND</span> </a>
+                                Tenrec</span> </a>
                         <a class="header__link" href="#getting-start" itemprop="url">
                             <span itemprop="name">Download</span> </a>
                         <a class="header__link" href="#leaderboard" itemprop="url">
@@ -627,43 +627,41 @@ r<!DOCTYPE html>
             <article class="post-content">
                 <!-- about mind -->
                 <h1 id="about-mind">About Tenrec</h1>
-                <p><strong>MI</strong>crosoft <strong>N</strong>ews <strong>D</strong>ataset (MIND) is a large-scale
-                    dataset for news recommendation research. 
-		    It was collected from anonymized behavior logs of <a href="https://microsoftnews.msn.com/">Microsoft News</a> website.
-			The mission of MIND is to serve as a
-                    benchmark dataset for news recommendation and facilitate the research in news recommendation and recommender systems area.</p>
+                <p><strong>Tenrec</strong> is a large-scale benchmark dataset for recommeder systems. 
+			It was collected from two different feeds recommendation platforms of Tencent.
+			Our aim is to solve the problem that it is difficult to adequately test the performance of the model 
+			due to the small size of the current recommendation system dataset or the single content of the dataset.</p>
 		    
-                <p>MIND contains about 160k English news articles and more than 15 million impression logs generated by 1 million users. Every news article contains rich textual content including
-                    title, abstract, body, category and entities. Each impression log contains the click events,
-                    non-clicked events and historical news click behaviors of this user before this impression. 
-                    To protect user privacy, each user was de-linked from the production system when securely hashed into an anonymized ID.
-                    For more detailed information about the MIND dataset, you can refer to the following paper:</p>
+                <p>We first randomly draw around 5.02 million users from the QK-video database; 
+		   then, we extract their feedback (around 493 million), including both positive feedback (i.e. video click, share, like and follow) 
+		   and negative feedback (with exposure but no user action); finally, we obtain around 142 million clicks, 10 million likes, 
+		   1 million shares and 0.86 million follows, alongside 3.75 million videos. Besides, there are anonymized age and gender features for users, 
+		  and the video type feature for items. We perform similar data extraction strategy for QK-article, QB-video, and QB-article.:</p>
                 <div class="button-container">
                     <button class="button button-pill button-primary"
 			    onclick="location.href='./assets/doc/ACL2020_MIND.pdf';">
-                        <strong>MIND paper (Wu et al., ACL 2020)</strong>
+                        <strong>Tenrec paper (Yuan et al., NIPS 2022)</strong>
                     </button>
                 </div>
                 <p>If you are interested in using this dataset in your research work, welcome to cite this paper:</p>
 		    
-		        <p>Fangzhao Wu, Ying Qiao, Jiun-Hung Chen, Chuhan Wu, Tao Qi, Jianxun Lian, Danyang Liu, Xing Xie, Jianfeng Gao, Winnie Wu and Ming Zhou. <strong>MIND: A Large-scale Dataset for News Recommendation.</strong> ACL 2020.</p>
+		        <p>Guanghu Yuan, Fajie Yuan, Yudong Li, Beibei Kong, Shujie Li, Lei Chen, Min Yang, Chenyun Yu, Bo Hu, Zang Li, Yu Xu, Xiaohu Qie. <strong>Tenrec: A Large-Scale Multipurpose Benchmark Dataset for Recommender Systems</strong> NIPS 2022.</p>
                
                 <br>
                 
                 <!-- download -->
 
                 <h1 id="getting-start">Download</h1>
-                <p>The MIND dataset is free to download for research purposes under
-                    <a href="https://github.com/msnews/MIND/blob/master/MSR%20License_Data.pdf">Microsoft Research
-                        License Terms</a>. 
+                <p>The Tenrec dataset can be downloaded for research purposes under
+                    <a href="https://static.qblv.qq.com/qblv/h5/algo-frontend/tenrec_dataset.html">Tenrec link</a>. 
 		Before you download the dataset, please read these terms and click below button to confirm that you agree to them.
                 </p>
-                <div style="text-align: center;">
+<!--                 <div style="text-align: center;">
                     <label>
                         <input style="width: 1.5rem" type="checkbox" name="TermAgree" id='TermAgree' value="false"
                             onClick="checkAllBox(this)">I agree to the Microsoft Research License Terms.
                     </label>
-                </div>
+                </div> -->
 		        <br>
             <div>
                 <p>
