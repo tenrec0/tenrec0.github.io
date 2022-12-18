@@ -627,34 +627,52 @@ r<!DOCTYPE html>
             <article class="post-content">
                 <!-- about mind -->
                 <h1 id="about-tenrec">About Tenrec</h1>
-                <p><strong>Tenrec</strong> is a large-scale benchmark dataset for recommeder systems. 
+<!--                 <p><strong>Tenrec</strong> is a large-scale benchmark dataset for recommeder systems. 
 			It was collected from two different feeds recommendation platforms of Tencent.
 			Our aim is to solve the problem that it is difficult to adequately test the performance of the model 
-			due to the small size of the current recommendation system dataset or the single content of the dataset.</p>
+			due to the small size of the current recommendation system dataset or the single content of the dataset.</p> -->
+			
+		 <p><strong>Tenrec</strong> is a large-scale benchmark dataset for recommeder systems. 
+			It was collected from two different feeds recommendation apps of Tencent with four scenarios. 
+		       Tenrec has five characteristics: (1) it is large-scale, containing around 5 million users and 140 million interactions; 
+			(2) it has not only positive user feedback, but also true negative feedback (vs. one-class recommendation); 
+			(3) it contains overlapped users and items across four different scenarios; 
+			(4) it contains various types of user positive feedback, in forms of clicks, likes, shares, and follows, etc; 
+			(5) it contains additional features beyond the user IDs and item IDs.</p>
 		    
-                <p>We first randomly draw around 5.02 million users from the QK-video database; 
+<!--                 <p>We first randomly draw around 5.02 million users from the QK-video database; 
 		   then, we extract their feedback (around 493 million), including both positive feedback (i.e. video click, share, like and follow) 
 		   and negative feedback (with exposure but no user action); finally, we obtain around 142 million clicks, 10 million likes, 
 		   1 million shares and 0.86 million follows, alongside 3.75 million videos. Besides, there are anonymized age and gender features for users, 
-		  and the video type feature for items. We perform similar data extraction strategy for QK-article, QB-video, and QB-article.:</p>
+		  and the video type feature for items. We perform similar data extraction strategy for QK-article, QB-video, and QB-article.:</p> -->
                 <div class="button-container">
                     <button class="button button-pill button-primary"
 			    onclick="location.href='./assets/doc/NIPS2022-Tenrec.pdf';">
                         <strong>Tenrec paper (Yuan et al., NeurIPS 2022)</strong>
                     </button>
                 </div>
-                <p>If you are interested in using this dataset in your research work, welcome to cite this paper:</p>
+		<p>If you use this dataset for your research, please cite this paper:
+		@article{yuan2022tenrec,
+		  title={Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems},
+		  author={Yuan, Guanghu and Yuan, Fajie and Li, Yudong and Kong, Beibei and Li, Shujie and Chen, Lei and Yang, Min and Yu, Chenyun and Hu, Bo and Li, Zang and others},
+		  journal={arXiv preprint arXiv:2210.10629},
+		  year={2022}
+		}
+		 </p>
+		    <p>*Email Fajie & Guanghu if you want to launch a new leaderboard for an important RS task using Tenrec.</p>
+<!--                 <p>If you are interested in using this dataset in your research work, welcome to cite this paper:</p> -->
 		    
-		        <p>Guanghu Yuan, Fajie Yuan, Yudong Li, Beibei Kong, Shujie Li, Lei Chen, Min Yang, Chenyun Yu, Bo Hu, Zang Li, Yu Xu, Xiaohu Qie. <strong>Tenrec: A Large-Scale Multipurpose Benchmark Dataset for Recommender Systems</strong> NeurIPS 2022.</p>
+		<p>Guanghu Yuan, Fajie Yuan, Yudong Li, Beibei Kong, Shujie Li, Lei Chen, Min Yang, Chenyun Yu, Bo Hu, Zang Li, Yu Xu, Xiaohu Qie. <strong>Tenrec: A Large-Scale Multipurpose Benchmark Dataset for Recommender Systems</strong> NeurIPS 2022.</p>
                
                 <br>
                 
                 <!-- download -->
 
                 <h1 id="getting-start">Download</h1>
-                <p>The Tenrec dataset can be downloaded for research purposes under
-                    <a href="https://static.qblv.qq.com/qblv/h5/algo-frontend/tenrec_dataset.html">Tenrec link</a>. 
-		Before you download the dataset, please read these terms and click below button to confirm that you agree to them.
+                <p>The Tenrec dataset can be used for research purposes under
+                    <a href="https://static.qblv.qq.com/qblv/h5/algo-frontend/tenrec_dataset.html">Tenrec Dataset link</a>. 
+		Before you download the dataset, please read these terms. 
+			And <a href="https://github.com/yuangh-x/2022-NIPS-Tenrec">Code link</a>. 
                 </p>
 <!--                 <div style="text-align: center;">
                     <label>
@@ -720,7 +738,12 @@ r<!DOCTYPE html>
                     </button>
                 </div>
 		    </div>  -->
-			
+	<h1 id="Note">Note</h1>
+	<p>If you use Tenrec (with our training, validation and testing set) and have new SOTA results, we are happy to update them on the leaderboard. 
+		In this case, you should provide (1) your algorithm code; (2) all your hyper-parameters; (3) a readme file tells other researchers how to run your code. 
+		We will append them on the leaderboard website, and make sure your models are evaluated with a fair comparison or common practice.  
+		We are also happy to create new leaderboard if you use Tenrec to perform new tasks, just email us.</p>
+		    
 			
 			            <h1 id="leaderboard">
                 Leaderboard
@@ -1185,7 +1208,7 @@ r<!DOCTYPE html>
                                     BERT4Rec
                                 </td>
                                 <td class="word-break">
-                                    <b>0.4963</b>
+                                    <b>0.04963</b>
                                 </td>
                                 <td class="word-break">
                                     <b>0.0239</b>
